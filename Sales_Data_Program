@@ -41,8 +41,9 @@ def Display_Records():
   print("{:<9}{:<7}{:<12}{:<6}{:<12}{:<8}{:<34}{:<12}{:^8}{:<9}".format("------","------","------","-" \
    ,"------","------","-----","---","---","---"))
   for Index in range(len(myrecords)):
-    print("{:<9}{:<7}{:<12}{:<6}{:<12}{:<8}{:<34}{:<12}{:^8}{:<9}".format(myrecords[Index][0],myrecords[Index][1],myrecords[Index][2] \
-     ,myrecords[Index][3],myrecords[Index][4],myrecords[Index][5],myrecords[Index][6],myrecords[Index][7],myrecords[Index][8],myrecords[Index][9]))
+    print("{:<9}{:<7}{:<12}{:<6}{:<12}{:<8}{:<34}{:<12}{:^8}{:<9}".format(myrecords[Index][0] \
+      ,myrecords[Index][1],myrecords[Index][2],myrecords[Index][3],myrecords[Index][4] \
+      ,myrecords[Index][5],myrecords[Index][6],myrecords[Index][7],myrecords[Index][8],myrecords[Index][9]))
 
 
 
@@ -72,7 +73,6 @@ def Write_Record_Header():
    OutFile.write('\n')
    
 
-
 def Write_Record_Details():
   try:
      for Index in range(len(myrecords)):   
@@ -89,7 +89,6 @@ def Write_Record_Details():
       OutFile.write('\n')
   except ValueError:
      Record = ''
-
 
 def Write_Record():
    global OutFile
